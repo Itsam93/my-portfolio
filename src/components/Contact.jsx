@@ -1,13 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-} from "react-icons/fa";
+import { Facebook, Twitter, Instagram, Download } from "lucide-react";
 
 function Contact() {
   const form = useRef();
@@ -39,7 +32,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section">
+    <section className="contact-section">
       <h2>Contact Me</h2>
       <div className="group">
         {/* Left Side */}

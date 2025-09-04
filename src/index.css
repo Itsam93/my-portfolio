@@ -35,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .hero-section {
@@ -43,7 +43,7 @@ body {
 }
 
 .hero-section h1 {
-  font-size: 35px;
+  font-size: 2rem;
   line-height: 45px;
 }
 
@@ -69,6 +69,48 @@ button {
 
 button:hover {
   background-color: var(--primary-hover-color);
+}
+/* 📱 Small screens (phones) */
+@media (max-width: 480px) {
+  .card {
+    width: 300px;
+    height: 580px;
+    padding: 15px;
+    margin-top: 40px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .navigation-buttons {
+    gap: 8px;
+    margin-top: 620px;
+  }
+  button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Medium screens (large phones / small tablets) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .card {
+    width: 300px;
+    min-height: 400px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* 💻 Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 300px;
+  }
 }
 
 /*
@@ -138,6 +180,88 @@ button:hover {
   color: red;
 }
 
+/* 📱 Small screens (phones) */
+@media (max-width: 480px) {
+  .hero {
+    gap: 20px;
+    text-align: center;
+  }
+
+  .hero .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero .text p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+
+  .hero .hero-picture img {
+    width: 180px;
+  }
+
+  .hero-social-icons {
+    margin-top: 20px;
+    gap: 10px;
+  }
+}
+
+/* 📱 Medium screens (large phones / small tablets) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero .text h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero .hero-picture img {
+    width: 200px;
+  }
+}
+
+/* 💻 Tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero .text {
+    flex: 1;
+  }
+
+  .hero .hero-picture img {
+    width: 280px;
+  }
+}
+
+/* 🖥 Large screens (desktops) */
+@media (min-width: 1025px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero .text h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero .text p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+
+  .hero .hero-picture img {
+    width: 320px;
+  }
+}
+
 /*Skills Section*/
 .skills-section {
   padding: 0 10px;
@@ -199,6 +323,113 @@ button:hover {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.3s;
+}
+/* 📱 Small screens (phones) */
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 0 5px;
+    height: 500px;
+  }
+  .skills-section h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .skills-section .text {
+    font-size: 0.3rem;
+    text-align: center;
+  }
+
+  .skills-section .cells {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  .skills-section .cells .cell img {
+    width: 20px;
+    height: 24px;
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 0rem;
+  }
+}
+
+/* 📱 Medium screens (tablets) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .skills-section {
+    padding: 0 10px;
+    height: 550px;
+  }
+  .skills-section h2 {
+    font-size: 1.75rem;
+    margin-top: 25px;
+  }
+
+  .skills-section .cells {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  .skills-section .cells .cell img {
+    width: 20px;
+    height: 24px;
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 0rem;
+  }
+}
+
+/* 💻 Tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .skills-section {
+    padding: 0 10px;
+    height: 550px;
+  }
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+
+  .skills-section .cells {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+
+  .skills-section .cells .cell img {
+    width: 20px;
+    height: 24px;
+  }
+  .skills-section .cells .cell span {
+    font-size: 0.4rem;
+  }
+}
+
+/* 🖥 Large screens */
+@media (min-width: 1025px) {
+  .skills-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .skills-section .cells {
+    gap: 25px;
+  }
+
+  .skills-section .cells .cell {
+    flex: 1 1 180px;
+  }
 }
 
 /* Projects */
@@ -292,18 +523,113 @@ button:hover {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+/* 📱 Small screens (phones) */
+@media (max-width: 480px) {
   .projects-section {
-    height: auto;
+    height: 600px;
+    width: 250px;
+    padding: 20px 0;
   }
+
+  .projects-section h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .projects-section .text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
   .projects-grid {
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    flex: 1;
+    overflow-y: auto;
+    perspective: 1000px;
   }
+
   .project-card img {
-    height: 150px;
+    height: 140px;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  .buttons a {
+    font-size: 0.8rem;
+    padding: 6px 10px;
   }
 }
 
+/* 📱 Medium screens (tablets) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .projects-section {
+    height: 580px;
+    width: 250px;
+    padding: 20px 0;
+  }
+
+  .projects-section h2 {
+    font-size: 1.5rem;
+  }
+  .projects-section .text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+}
+
+/* 💻 Tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .projects-section {
+    height: 580px;
+    width: 250px;
+    padding: 20px 0;
+  }
+
+  .projects-section h2 {
+    font-size: 1.5rem;
+  }
+  .projects-section .text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+}
+
+/* 🖥 Large screens */
+@media (min-width: 1025px) {
+  .projects-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .projects-grid {
+    gap: 25px;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+}
 /*Testimony*/
 .testimony-section {
   padding: 0 10px;
@@ -319,8 +645,11 @@ button:hover {
 }
 
 .testimony-section .group {
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 50px;
+  flex-wrap: wrap;
 }
 
 .testimony-section .person-details {
@@ -353,6 +682,53 @@ button:hover {
 .testimony-section .text {
   line-height: 25px;
 }
+/* 📱 Small screens (phones) */
+@media (max-width: 768px) {
+  .testimony-section {
+    padding: 0 5px;
+    height: 500px;
+  }
+  .testimony-section h2 {
+    font-size: 26px;
+    /* margin-top: 10px; */
+  }
+
+  .testimony-section .group {
+    flex-direction: column; /* ✅ stack vertically */
+    gap: 25px;
+  }
+
+  .testimony-section .person-details img {
+    width: 140px;
+  }
+
+  .testimony-section .group .testimony-text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* 💻 Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .testimony-section {
+    padding: 0 10px;
+    height: 550px;
+  }
+  .testimony-section h2 {
+    font-size: 30px;
+  }
+
+  .testimony-section .group {
+    gap: 30px;
+  }
+
+  .testimony-section .group .testimony-text {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+s
 
 /* Contact me*/
 .contact-section {
@@ -378,7 +754,7 @@ button:hover {
 
 .contact-section .text {
   flex: 1;
-  min-width: 280px;
+  width: 280px;
 }
 
 .contact-section .text p {
@@ -453,13 +829,65 @@ form button:hover {
   background: #0056b3;
 }
 
-/* Responsive */
+/* 📱 Small screens (phones) */
 @media (max-width: 768px) {
-  .group {
-    flex-direction: column;
+  .contact-section {
+    padding: 0 5px;
+    height: 580px;
+  }
+  .contact-section h2 {
+    font-size: 1.5rem;
+    margin-top: 15px;
   }
 
+  .contact-section .text {
+    width: 250px;
+    font-size: 13px;
+  }
+
+  .group {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  form {
+    width: 70%;
+    padding: 10px;
+  }
+  form input {
+    width: 85%;
+    padding: 6px;
+  }
+  form label {
+    font-size: 0.75rem;
+    text-align: left;
+  }
+  form textarea {
+    width: 85%;
+    padding: 6px;
+    height: 50px;
+  }
+  form button {
+    width: 85%;
+    /* margin: auto; */
+  }
+}
+
+/* 💻 Medium screens (tablets) */
+@media (max-width: 1024px) {
   .contact-section h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+
+  .group {
+    gap: 30px;
+  }
+  form {
+    padding: 13px;
   }
 }
