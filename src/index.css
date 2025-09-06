@@ -215,6 +215,10 @@ button:hover {
   .hero .text h2 {
     font-size: 1.75rem;
   }
+  .hero .text p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
 
   .hero .hero-picture img {
     width: 200px;
@@ -224,10 +228,14 @@ button:hover {
 /* 💻 Tablets and small desktops */
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero {
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
     gap: 60px;
     align-items: center;
+  }
+
+  .hero .text h2 {
+    font-size: 1.5rem;
   }
 
   .hero .text {
@@ -235,30 +243,34 @@ button:hover {
   }
 
   .hero .hero-picture img {
-    width: 280px;
+    width: 200px;
+  }
+  .hero .text p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
   }
 }
 
 /* 🖥 Large screens (desktops) */
 @media (min-width: 1025px) {
   .hero {
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
-    gap: 80px;
+    gap: 50px;
     align-items: center;
   }
 
   .hero .text h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .hero .text p {
-    font-size: 1.1rem;
-    line-height: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
   }
 
   .hero .hero-picture img {
-    width: 320px;
+    width: 250px;
   }
 }
 
@@ -370,6 +382,10 @@ button:hover {
     margin-top: 25px;
   }
 
+  .skills-section .text {
+    font-size: 0.9rem;
+  }
+
   .skills-section .cells {
     display: flex;
     justify-content: center;
@@ -428,7 +444,7 @@ button:hover {
   }
 
   .skills-section .cells .cell {
-    flex: 1 1 180px;
+    flex: 1 1 100px;
   }
 }
 
