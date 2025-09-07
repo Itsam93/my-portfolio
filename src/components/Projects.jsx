@@ -4,7 +4,7 @@ function Projects() {
   const projects = [
     {
       img: "/todo-list-preview.JPG",
-      title: "Portfolio Website",
+      title: "To-Do List Website",
       desc: "A responsive task management app using React, deployed on Vercel.",
       demo: "https://my-todo-ochre-kappa.vercel.app/",
       code: "https://github.com/Itsam93/my-todo",
@@ -22,6 +22,27 @@ function Projects() {
       desc: "A modern school management system built with React, Node, and MongoDB.",
       demo: "https://school-app-snowy.vercel.app/",
       code: "https://github.com/Itsam93/school-app",
+    },
+    {
+      img: "/turning-scars-to-stars-preview.JPG",
+      title: "Turning Scars to Stars",
+      desc: "A Non-Profit Organization Web Application built with React.",
+      demo: "https://new-tsts.vercel.app/",
+      code: "https://github.com/Itsam93/NEW_TSTS/",
+    },
+    {
+      img: "/httn-preview.JPG",
+      title: "HTTN",
+      desc: "One of my first web app i tried to redesign the UI using HTML and CSS.",
+      demo: "https://httn.vercel.app/",
+      code: "https://github.com/Itsam93/httn",
+    },
+    {
+      img: "/frost-preview.JPG",
+      title: "Frost",
+      desc: "My Second web app i tried to redesign the UI using HTML and CSS.",
+      demo: "https://frost-umber.vercel.app/",
+      code: "https://github.com/Itsam93/Frost",
     },
   ];
 
