@@ -960,3 +960,75 @@ form button:hover {
     padding: 13px;
   }
 }
+
+
+/* --- Global Fade-in for the whole section --- */
+.fade-section {
+  opacity: 0;
+  animation: fadeInSection 0.9s ease-out forwards;
+}
+
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- Slide-up for heading --- */
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Fade-in for description text --- */
+.fade-in-delayed {
+  opacity: 0;
+  animation: fadeInText 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- Skill cards animation --- */
+.skill-animate {
+  opacity: 0;
+  transform: scale(0.85);
+  animation: popIn 0.5s ease-out forwards;
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- Skill card hover effects --- */
+.cell {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.cell img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+
