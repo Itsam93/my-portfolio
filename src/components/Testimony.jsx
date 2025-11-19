@@ -10,12 +10,12 @@ function Testimony() {
             <p>Director, Tech Hub Corp</p>
           </div>
           <div className="testimony-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            molestiae minima in dolore, ullam obcaecati consequuntur impedit
-            fugit odit esse perferendis libero atque vero incidunt eum veniam
-            dolor officiis quas consequatur est at? Magni voluptatem dignissimos
-            architecto cupiditate sapiente quae! Hic quos nam iure consequuntur
-            expedita, illum autem repellat magnam?
+            Working with Samuel was a fantastic experience. He delivered our project
+            with exceptional attention to detail and a strong sense of creativity.
+            His ability to transform ideas into clean, responsive user interfaces
+            made a huge difference in the final product. We were especially impressed
+            by his communication, reliability, and commitment to quality. I would
+            gladly work with him again on future projects.
           </div>
         </div>
       </section>
