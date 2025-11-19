@@ -1,7 +1,4 @@
 import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
   FaGithub,
   FaLinkedin,
   FaEnvelope,
@@ -9,11 +6,13 @@ import {
 
 function Welcome() {
   return (
-    <div className="hero-section">
-      <h1 className="hero-title">WELCOME TO MY PORTFOLIO</h1>
+    <div className="hero-section fade-slide">
+      <h1 className="welcome-title">
+        WELCOME TO MY PORTFOLIO
+      </h1>
 
       {/* Social Links */}
-      <div className="hero-social-icons">
+      <div className="hero-social-icons fade-delay">
         <a
           href="https://github.com/Itsam93"
           target="_blank"
@@ -21,6 +20,7 @@ function Welcome() {
         >
           <FaGithub size={24} />
         </a>
+
         <a
           href="https://www.linkedin.com/in/samuel-oglekwu/"
           target="_blank"
@@ -28,6 +28,7 @@ function Welcome() {
         >
           <FaLinkedin size={24} />
         </a>
+
         <a href="mailto:samogleks@gmail.com">
           <FaEnvelope size={24} />
         </a>
