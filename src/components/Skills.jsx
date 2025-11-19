@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Typewriter } from "react-simple-typewriter";
 
 function Skills() {
   const skills = [
@@ -15,33 +14,41 @@ function Skills() {
 
   return (
     <section className="skills-section">
+      
+      {/* Title Animation */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
+        className="text-3xl font-bold"
       >
         My Skills
       </motion.h2>
 
-      <Typewriter
-        className="text"
-        words={[
-          "I'm skilled in front-end and back-end web development, with hands-on experience in building modern, responsive applications. I focus on writing clean, efficient code, creating seamless user experiences, and deploying projects to production.",
-        ]}
-        loop={false}
-        typespeed={40}
-        deleteSpeed={20}
-      />
+      {/* Description (replacing Typewriter) */}
+      <motion.p
+        className="text max-w-2xl mt-4 leading-relaxed"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        I'm skilled in front-end and back-end web development, with hands-on
+        experience in building modern, responsive applications. I focus on
+        writing clean, efficient code, creating seamless user experiences,
+        and deploying projects to production.
+      </motion.p>
 
-      <div className="cells">
+      {/* Skills Grid */}
+      <div className="cells mt-10">
         {skills.map((skill, index) => (
           <motion.div
             key={skill.label}
             className="cell"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
+            transition={{ duration: 0.35, delay: index * 0.1 }}
             whileHover={{ scale: 1.1, rotate: 2 }}
             viewport={{ once: true }}
           >
@@ -53,4 +60,5 @@ function Skills() {
     </section>
   );
 }
+
 export default Skills;
