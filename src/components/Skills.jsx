@@ -13,48 +13,26 @@ function Skills() {
   ];
 
   return (
-    <section className="skills-section">
-      
-      {/* Title Animation */}
-      <motion.h2
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-3xl font-bold"
-      >
-        My Skills
-      </motion.h2>
+    <section className="skills-section fade-section">
+      <h2 className="skills-title slide-up">My Skills</h2>
 
-      {/* Description (replacing Typewriter) */}
-      <motion.p
-        className="text max-w-2xl mt-4 leading-relaxed"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
+      <p className="text fade-in-delayed">
         I'm skilled in front-end and back-end web development, with hands-on
         experience in building modern, responsive applications. I focus on
-        writing clean, efficient code, creating seamless user experiences,
-        and deploying projects to production.
-      </motion.p>
+        writing clean, efficient code, creating seamless user experiences, and
+        deploying projects to production.
+      </p>
 
-      {/* Skills Grid */}
-      <div className="cells mt-10">
+      <div className="cells">
         {skills.map((skill, index) => (
-          <motion.div
+          <div
             key={skill.label}
-            className="cell"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.35, delay: index * 0.1 }}
-            whileHover={{ scale: 1.1, rotate: 2 }}
-            viewport={{ once: true }}
+            className="cell skill-animate"
+            style={{ animationDelay: `${index * 0.15}s` }}
           >
             <img src={skill.img} alt={`${skill.label} logo`} />
             <span>{skill.label}</span>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
@@ -62,3 +40,4 @@ function Skills() {
 }
 
 export default Skills;
+
