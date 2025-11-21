@@ -219,7 +219,7 @@ button:active {
 }
 
 .hero .hero-picture img {
-  width: 250px;
+  height: 210px;
   border-radius: 10px;
   margin: 0 auto;
 }
