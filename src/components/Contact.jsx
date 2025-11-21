@@ -52,14 +52,14 @@ function Contact() {
               <Facebook size={24} />
             </a>
             <a
-              href="https://www.twitter.com"
+              href="https://www.twitter.com/sam_ogleks/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Twitter size={24} />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/sam_ogleks/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -68,7 +68,7 @@ function Contact() {
           </div>
 
           {/* CV Download */}
-          <a href="/SAM CV.pdf" download="SAM_CV.pdf" className="btn btn2">
+          <a href="/SAM CV1.pdf" download="SAM_CV.pdf" className="btn btn2">
             <Download size={18} /> Download CV
           </a>
         </div>

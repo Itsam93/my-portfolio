@@ -2,49 +2,50 @@ import { motion } from "framer-motion";
 
 function Projects() {
   const projects = [
-    {
-      img: "/todo-list-preview.JPG",
-      title: "To-Do List Website",
-      desc: "A responsive task management app using React, deployed on Vercel.",
-      demo: "https://my-todo-ochre-kappa.vercel.app/",
-      code: "https://github.com/Itsam93/my-todo",
-    },
-    {
-      img: "/bible-quiz-preview.JPG",
-      title: "Bible Quiz App",
-      desc: "A Bible Quiz app using React and TailwindCSS. Deployed on Vercel.",
-      demo: "https://bible-quiz-app-tawny.vercel.app/",
-      code: "https://github.com/Itsam93/bible-quiz-app",
-    },
-    {
-      img: "/school-app-preview.JPG",
-      title: "School Management System",
-      desc: "A modern school management system built with React, Node, and MongoDB.",
-      demo: "https://school-app-snowy.vercel.app/",
-      code: "https://github.com/Itsam93/school-app",
-    },
-    {
-      img: "/turning-scars-to-stars-preview.JPG",
-      title: "Turning Scars to Stars",
-      desc: "A Non-Profit Organization Web Application built with React.",
-      demo: "https://new-tsts.vercel.app/",
-      code: "https://github.com/Itsam93/NEW_TSTS/",
-    },
-    {
-      img: "/httn-preview.JPG",
-      title: "HTTN",
-      desc: "One of my first web app i tried to redesign the UI using HTML and CSS.",
-      demo: "https://httn.vercel.app/",
-      code: "https://github.com/Itsam93/httn",
-    },
-    {
-      img: "/frost-preview.JPG",
-      title: "Frost",
-      desc: "My Second web app i tried to redesign the UI using HTML and CSS.",
-      demo: "https://frost-umber.vercel.app/",
-      code: "https://github.com/Itsam93/Frost",
-    },
-  ];
+  {
+    img: "/school-app-preview.JPG",
+    title: "School Management System",
+    desc: "A full-featured school management platform developed with React, Node.js, and MongoDB, enabling efficient student, teacher, and class management.",
+    demo: "https://school-app-snowy.vercel.app/",
+    code: "https://github.com/Itsam93/school-app",
+  },
+  {
+    img: "/turning-scars-to-stars-preview.JPG",
+    title: "Turning Scars to Stars",
+    desc: "A responsive web application for a non-profit organization, built with React, designed to streamline outreach and engagement.",
+    demo: "https://new-tsts.vercel.app/",
+    code: "https://github.com/Itsam93/NEW_TSTS/",
+  },
+  {
+    img: "/httn-preview.JPG",
+    title: "HTTN",
+    desc: "A UI redesign project of an existing web application, created with HTML and CSS to enhance user experience and interface design.",
+    demo: "https://httn.vercel.app/",
+    code: "https://github.com/Itsam93/httn",
+  },
+  {
+    img: "/frost-preview.JPG",
+    title: "Frost",
+    desc: "A web application redesign focused on modern UI and responsive design using HTML and CSS to improve accessibility and aesthetics.",
+    demo: "https://frost-umber.vercel.app/",
+    code: "https://github.com/Itsam93/Frost",
+  },
+  {
+    img: "/todo-list-preview.JPG",
+    title: "To-Do List Website",
+    desc: "A responsive task management application built with React, enabling users to organize, track, and prioritize tasks efficiently. Deployed on Vercel.",
+    demo: "https://my-todo-ochre-kappa.vercel.app/",
+    code: "https://github.com/Itsam93/my-todo",
+  },
+  {
+    img: "/bible-quiz-preview.JPG",
+    title: "Bible Quiz App",
+    desc: "An interactive Bible Quiz application developed with React and TailwindCSS, offering an engaging learning experience. Deployed on Vercel.",
+    demo: "https://bible-quiz-app-tawny.vercel.app/",
+    code: "https://github.com/Itsam93/bible-quiz-app",
+  },
+];
+
 
   return (
     <section id="projects" className="projects-section">

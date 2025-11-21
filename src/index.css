@@ -38,6 +38,14 @@ body {
   margin: 20px auto;
 }
 
+
+@media (max-width: 1200px) {
+  .card {
+    height: 560px;
+    width: 430px;
+  }
+}
+
 .hero-section {
   text-align: center;
 }
@@ -47,34 +55,89 @@ body {
   line-height: 45px;
 }
 
-.navigation-buttons {
-  position: absolute;
-  margin-top: 670px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  padding: 10px;
+
+
+/* Small screens */
+@media (max-width: 480px) {
+  .navigation-buttons {
+    bottom: 20px;
+    gap: 0.5rem;
+
+  }
+
+  .navigation-buttons button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
 }
+
+/* Medium screens */
+@media (min-width: 481px) and (max-width: 767px) {
+  .navigation-buttons {
+    bottom: 25px;
+    gap: 0.8rem;
+  }
+
+  .navigation-buttons button {
+    padding: 9px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 768px) {
+  .navigation-buttons {
+    bottom: 40px;
+    gap: 1rem;
+  }
+
+  .navigation-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+
 
 button {
   background-color: var(--primary-color);
   outline: none;
   border: none;
-  padding: 8px 15px;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 12px;
   cursor: pointer;
   color: white;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 button:hover {
   background-color: var(--primary-hover-color);
+  transform: scale(1.07);
 }
-/* 📱 Small screens (phones) */
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* smooth fade/slide animation */
+.nav-animate {
+  opacity: 0;
+  animation: navFade 0.6s ease forwards;
+}
+
+@keyframes navFade {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0px); }
+}
+/* Small screens (phones) */
 @media (max-width: 480px) {
   .card {
     width: 300px;
-    height: 580px;
+    height: 550px;
     padding: 15px;
     margin-top: 40px;
   }
@@ -94,22 +157,18 @@ button:hover {
   }
 }
 
-/* 📱 Medium screens (large phones / small tablets) */
+/* Medium screens (large phones / small tablets) */
 @media (min-width: 481px) and (max-width: 767px) {
   .card {
     width: 300px;
     min-height: 400px;
   }
-
-  .hero-section h1 {
-    font-size: 1.75rem;
-  }
 }
 
-/* 💻 Tablets */
+/* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
   .card {
-    width: 300px;
+    width: 400px;
   }
 }
 
@@ -180,7 +239,7 @@ button:hover {
   color: red;
 }
 
-/* 📱 Small screens (phones) */
+/* Small screens (phones) */
 @media (max-width: 480px) {
   .hero {
     gap: 20px;
@@ -192,7 +251,7 @@ button:hover {
   }
 
   .hero .text p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.3rem;
   }
 
@@ -249,28 +308,20 @@ button:hover {
   animation: glowText 2s ease-in-out infinite alternate;
 }
 
-@keyframes glowText {
-  0% {
-    text-shadow: 0px 0px 5px rgba(255, 0, 0, 0.3);
-  }
-  100% {
-    text-shadow: 0px 0px 12px rgba(255, 0, 0, 0.8);
-  }
-}
 
 
-/* 📱 Medium screens (large phones / small tablets) */
+/* Medium screens (large phones / small tablets) */
 @media (min-width: 481px) and (max-width: 767px) {
   .hero {
     text-align: center;
   }
 
   .hero .text h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .hero .text p {
-    font-size: 0.9rem;
-    line-height: 1.3rem;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
   }
 
   .hero .hero-picture img {
@@ -278,13 +329,14 @@ button:hover {
   }
 }
 
-/* 💻 Tablets and small desktops */
+/* Tablets and small desktops */
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: left;
     gap: 60px;
     align-items: center;
+    padding: 0 10px;
   }
 
   .hero .text h2 {
@@ -304,7 +356,7 @@ button:hover {
   }
 }
 
-/* 🖥 Large screens (desktops) */
+/* Large screens (desktops) */
 @media (min-width: 1025px) {
   .hero {
     flex-direction: column;
@@ -323,7 +375,7 @@ button:hover {
   }
 
   .hero .hero-picture img {
-    width: 250px;
+    width: 200px;
   }
 }
 
@@ -335,8 +387,8 @@ button:hover {
 
 .skills-section h2 {
   text-align: center;
-  font-size: 35px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin: 20px;
 }
 
 .skills-section .text {
@@ -389,7 +441,7 @@ button:hover {
   opacity: 1;
   transition: opacity 0.3s;
 }
-/* 📱 Small screens (phones) */
+/* Small screens (phones) */
 @media (max-width: 480px) {
   .skills-section {
     padding: 0 5px;
@@ -401,7 +453,7 @@ button:hover {
   }
 
   .skills-section .text {
-    font-size: 0.3rem;
+    font-size: .8rem;
     text-align: center;
   }
 
@@ -415,7 +467,7 @@ button:hover {
   }
 
   .skills-section .cells .cell img {
-    width: 20px;
+    width: 35px;
     height: 24px;
   }
 
@@ -424,14 +476,14 @@ button:hover {
   }
 }
 
-/* 📱 Medium screens (tablets) */
+/* Medium screens (tablets) */
 @media (min-width: 481px) and (max-width: 767px) {
   .skills-section {
     padding: 0 10px;
     height: 550px;
   }
   .skills-section h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-top: 25px;
   }
 
@@ -458,7 +510,7 @@ button:hover {
   }
 }
 
-/* 💻 Tablets and small desktops */
+/* Tablets and small desktops */
 @media (min-width: 768px) and (max-width: 1024px) {
   .skills-section {
     padding: 0 10px;
@@ -467,6 +519,11 @@ button:hover {
   .skills-section h2 {
     font-size: 2rem;
   }
+
+  .skills-section .text {
+    font-size: 0.9rem;
+  }
+
 
   .skills-section .cells {
     display: flex;
@@ -479,7 +536,7 @@ button:hover {
 
   .skills-section .cells .cell img {
     width: 20px;
-    height: 24px;
+    height: 20px;
   }
   .skills-section .cells .cell span {
     font-size: 0.4rem;
@@ -490,10 +547,11 @@ button:hover {
 @media (min-width: 1025px) {
   .skills-section h2 {
     font-size: 2.2rem;
+    margin-top: 45px;
   }
 
   .skills-section .cells {
-    gap: 25px;
+    gap: 10px;
   }
 
   .skills-section .cells .cell {
@@ -507,7 +565,7 @@ button:hover {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  height: 650px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -562,7 +620,7 @@ button:hover {
   margin: 10px 0;
 }
 
-.project-card p {
+.projects-grid p {
   font-size: 0.95rem;
   color: #555;
   margin-bottom: 15px;
@@ -592,7 +650,7 @@ button:hover {
 }
 
 /* Responsive */
-/* 📱 Small screens (phones) */
+/* Small screens (phones) */
 @media (max-width: 480px) {
   .projects-section {
     height: 600px;
@@ -606,7 +664,7 @@ button:hover {
   }
 
   .projects-section .text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.4;
   }
 
@@ -628,7 +686,7 @@ button:hover {
   }
 
   .project-card p {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
   }
 
   .buttons a {
@@ -637,7 +695,7 @@ button:hover {
   }
 }
 
-/* 📱 Medium screens (tablets) */
+/* Medium screens (tablets) */
 @media (min-width: 481px) and (max-width: 767px) {
   .projects-section {
     height: 580px;
@@ -653,7 +711,7 @@ button:hover {
     line-height: 1.4;
   }
   .project-card p {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
   }
 
   .project-card img {
@@ -661,7 +719,7 @@ button:hover {
   }
 }
 
-/* 💻 Tablets and small desktops */
+/* Tablets and small desktops */
 @media (min-width: 768px) and (max-width: 1024px) {
   .projects-section {
     height: 580px;
@@ -685,8 +743,9 @@ button:hover {
   }
 }
 
-/* 🖥 Large screens */
+/* Large screens */
 @media (min-width: 1025px) {
+  
   .projects-section h2 {
     font-size: 2.2rem;
   }
@@ -707,8 +766,8 @@ button:hover {
 
 .testimony-section h2 {
   text-align: center;
-  font-size: 35px;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin: 0 30px;
   display: flex;
   flex-direction: column;
 }
@@ -728,8 +787,9 @@ button:hover {
 
 .testimony-section .group .testimony-text {
   text-align: left;
-  margin-top: 10px;
-  line-height: 25px;
+  line-height: 22px;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .testimony-section .person-details img {
@@ -737,7 +797,7 @@ button:hover {
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin: 40px 0 10px 0;
 }
 
 .testimony-section .person-details p {
@@ -751,6 +811,8 @@ button:hover {
 .testimony-section .text {
   line-height: 25px;
 }
+
+
 /* 📱 Small screens (phones) */
 @media (max-width: 768px) {
   .testimony-section {
@@ -759,11 +821,11 @@ button:hover {
   }
   .testimony-section h2 {
     font-size: 26px;
-    /* margin-top: 10px; */
+    margin-top: 35px;
   }
 
   .testimony-section .group {
-    flex-direction: column; /* ✅ stack vertically */
+    flex-direction: column; 
     gap: 25px;
   }
 
@@ -771,14 +833,14 @@ button:hover {
     width: 140px;
   }
 
-  .testimony-section .group .testimony-text {
+  .testimony-section .group .testimony-text blockquote {
     text-align: left;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 13px;
+    line-height: 20px;
   }
 }
 
-/* 💻 Medium screens (tablets) */
+/* Medium screens (tablets) */
 @media (max-width: 1024px) {
   .testimony-section {
     padding: 0 10px;
@@ -797,7 +859,30 @@ button:hover {
     line-height: 22px;
   }
 }
-s
+
+
+@media (max-width: 1200px) {
+  .testimony-section {
+    padding: 0 10px;
+  }
+  .testimony-section h2 {
+    font-size: 30px;
+    margin-top: 35px;
+  }
+
+  .testimony-section .group {
+    gap: 30px;
+  }
+
+  .testimony-section .group .testimony-text {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+
+
+
+
 
 /* Contact me*/
 .contact-section {
@@ -867,7 +952,7 @@ form {
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
   height: 300px;
 }
 
@@ -886,6 +971,7 @@ form textarea {
 
 form button {
   padding: 10px 15px;
+  margin-top: 10px;
   border: none;
   border-radius: 6px;
   background: #007bff;
@@ -898,6 +984,7 @@ form button:hover {
   background: #0056b3;
 }
 
+
 /* 📱 Small screens (phones) */
 @media (max-width: 768px) {
   .contact-section {
@@ -906,12 +993,12 @@ form button:hover {
   }
   .contact-section h2 {
     font-size: 1.5rem;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .contact-section .text {
     width: 250px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .group {
@@ -925,13 +1012,15 @@ form button:hover {
   }
 
   form {
-    width: 70%;
+    min-width: 70%;
     padding: 10px;
   }
   form input {
     width: 85%;
     padding: 6px;
   }
+  
+
   form label {
     font-size: 0.75rem;
     text-align: left;
@@ -943,7 +1032,6 @@ form button:hover {
   }
   form button {
     width: 85%;
-    /* margin: auto; */
   }
 }
 
@@ -957,9 +1045,55 @@ form button:hover {
     gap: 30px;
   }
   form {
-    padding: 13px;
+    padding: 5px;
+    min-width: 80%;
   }
 }
+
+
+@media (max-width: 1200px) {
+  .contact-section {
+    padding: 0 5px;
+  }
+  .contact-section h2 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+
+  .contact-section .text {
+    font-size: 12px;
+  }
+
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  form {
+    min-width: 100%;
+    padding: 10px;
+  }
+  form input {
+    width: 100%;
+    padding: 6px;
+  }
+  
+
+  form label {
+    font-size: 0.75rem;
+    text-align: left;
+  }
+  form textarea {
+    width: 100%;
+    padding: 6px;
+    height: 50px;
+  }
+  form button {
+    width: 100%;
+  }
+}
+
+
 
 
 /* --- Global Fade-in for the whole section --- */
@@ -1030,5 +1164,4 @@ form button:hover {
   height: 60px;
   object-fit: contain;
 }
-
 
