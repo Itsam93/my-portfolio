@@ -12,7 +12,7 @@ function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <img src="/picture1.webp" alt="Portrait of Samuel Oglekwu" />
+        <img src="/sam.png" alt="Portrait of Samuel Oglekwu" />
       </motion.div>
 
       <div className="text">
