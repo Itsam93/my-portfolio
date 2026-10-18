@@ -33,11 +33,13 @@ function Hero() {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="mt-4 text-lg leading-relaxed"
         >
-          I'm a passionate Front-End Developer with a keen eye for detail and a strong 
-          focus on creating clean, responsive, and user-friendly interfaces. I enjoy 
-          turning complex problems into elegant, intuitive digital experiences. Whether 
-          it's building from scratch or improving existing systems, I'm driven by a 
-          love for good design, clean code, and seamless user interaction.
+          I'm a Data Analyst and Front-End Developer passionate about transforming 
+          data and ideas into meaningful, user-focused digital solutions. I combine 
+          analytical thinking with a keen eye for design to build responsive, intuitive 
+          interfaces and uncover insights that support better decision-making. Whether 
+          I'm developing applications from the ground up, improving existing systems, or 
+          translating complex data into actionable insights, I focus on writing clean code, 
+          solving problems efficiently, and creating digital experiences that are both functional and impactful.
         </motion.p>
       </div>
     </section>
